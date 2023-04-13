@@ -30,7 +30,6 @@ void input()
 }
 
 
-
 void LinearSearch()
 {
 	char ch;
@@ -42,30 +41,3 @@ void LinearSearch()
 		cout << "\nenter the element you want to search: ";  //langkah no 1 algoritma
 		int item;
 		cin >> item;
-
-		ctr = 0;
-		for (i = 0; i < n; i++)								//langkah no 2 & 3 & 4
-		{
-			ctr++;
-			if (arr[i] == item)								//langkah no 5 algoritma
-			{
-				cout << "\n" << item << "found at position" << (i + 1) << endl;
-				break;
-			}
-		}
-
-		if (i == n)
-			cout << "\n" << item << " not found in the array\n";
-		cout << "\nNumber of comparisons: " << ctr << endl;
-
-		cout << "\ncontinue search (y/n): ";
-		cin >> ch;
-	} while ((ch == 'y') || (ch == 'Y'));
-}
-
-
-int main()
-{
-	input();
-	LinearSearch();
-}
